@@ -1,0 +1,67 @@
+/* src/components/Contact.css */
+
+#contact {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  #contact h1 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  #contact label {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  }
+  
+  #contact input:focus,
+  #contact textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+  }
+  
+  #contact button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact button:hover {
+    background-color: #17a94a; /* Darker shade of accent color */
+  }
+  

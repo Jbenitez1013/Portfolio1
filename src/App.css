@@ -1,38 +1,145 @@
-.App {
+/* src/App.css */
+
+:root {
+  --background-color: #0d0d0d;
+  --primary-color: #ffffff;
+  --secondary-color: #333333;
+  --accent-color: #1db954; /* A sleek green for accent elements */
+  --border-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Bar Styling */
+/* Navigation Bar Styling */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-around; /* Space out buttons evenly */
+  padding: 1rem;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button {
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--accent-color); /* Change color on hover */
+}
+
+/* Header, Footer, and Main Styling */
+header {
+  padding: 1rem;
+  margin-top: 60px; /* Adds space from the fixed nav bar */
+}
+
+footer {
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: var(--secondary-color);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Adjust the main container to account for the fixed nav bar */
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 1;
+  text-align: center; /* Centers text inside the container */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Custom Button Style */
+.custom-button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #89ffb3; /* Slightly brighter green */
+  transform: scale(1.05);  /* Scales the button up slightly */
+}
+
+/* Content Section Styling */
+.content-section {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Side GIF Column Styles */
+.side-gif-left, .side-gif-right {
+  position: fixed;
+  top: 0;
+  width: 100px; /* Adjust width as needed */
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6; /* Add transparency */
+  z-index: -1; /* Place behind content */
+}
+
+.side-gif-left {
+  left: 0;
+  background-image: url('https://media.tenor.com/cKgOapMuyWcAAAAM/coding-developer-code.gif'); /* Path to your GIF */
+}
+
+.side-gif-right {
+  right: 0;
+  background-image: url('https://media.tenor.com/cKgOapMuyWcAAAAM/coding-developer-code.gif'); /* Path to your GIF */
+}
+
+.image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px; /* Space between the images */
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container img {
+  max-width: 45%; /* Adjusts each image width to fit side by side */
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
